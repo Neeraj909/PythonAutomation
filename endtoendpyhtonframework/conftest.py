@@ -8,6 +8,7 @@ def driverSetup(request):
     service_obj = Service("/Users/neeraj.b.sharma/Downloads/pythonBasics/chromedriver")
     driver = webdriver.Chrome(service = service_obj)
     driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
+    driver.implicitly_wait(5)
     driver.maximize_window()
     request.cls.driver = driver
     yield
